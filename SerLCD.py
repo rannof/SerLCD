@@ -107,9 +107,7 @@ class SerLCD:
       self.pos(2, 1)                   # lines to prevent bug in firmware
       self.write("                ")   # where old text can appear
       self.clear()
-      self.write(line1)
-      self.pos(2, 1)
-      self.write(line2)
+      self.screen(line1, line2)
       time.sleep(1)
       self.lcd.write(chr(SerLCD.COMMAND2))
       self.lcd.write(chr(SerLCD.SETSPLASH))
