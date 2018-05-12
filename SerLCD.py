@@ -114,7 +114,7 @@ class SerLCD:
         if not 30 >= x >= 1:
             raise ValueError, "Brightness value can be 1 - 30"
         self.brightness = x + 127
-        self.write(chr(self.COMMAND1))
+        self.write(chr(self.COMMAND2))
         self.write(chr(self.brightness))
 
     def screen(self, line1, line2):
