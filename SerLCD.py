@@ -111,7 +111,7 @@ class SerLCD:
         self.write(chr(self.SPLASHTOGGLE))
 
     def bright_level(self, x):
-        if 30 < x < 1:
+        if not 30 >= x >= 1:
             raise ValueError, "Brightness value can be 1 - 30"
         self.brightness = x + 127
         self.write(chr(self.COMMAND1))
